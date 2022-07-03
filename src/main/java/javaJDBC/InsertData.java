@@ -1,3 +1,5 @@
+package javaJDBC;
+
 import java.io.*;
 import java.sql.*;
 
