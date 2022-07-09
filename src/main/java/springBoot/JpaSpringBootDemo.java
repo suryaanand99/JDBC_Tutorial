@@ -25,7 +25,7 @@ public class JpaSpringBootDemo implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         LOGGER.info("Person -> {}", personJpaDAO.findById(10001));
-//        LOGGER.info("All persons -> {}", personJpaDAO.findAll());
+        LOGGER.info("All persons -> {}", personJpaDAO.findAll());
         LOGGER.info("Delete Person 10002");
         personJpaDAO.deleteById(10002);
         LOGGER.info("update Person 10001 -> no of rows affected {}",

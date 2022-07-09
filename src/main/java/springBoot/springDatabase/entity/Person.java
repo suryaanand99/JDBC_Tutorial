@@ -1,13 +1,11 @@
 package springBoot.springDatabase.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.Date;
 
 @Entity
 @Table(name="person")
+@NamedQuery(name = "find-all-person", query = "select p from Person p")
 public class Person {
     @Id
     @GeneratedValue

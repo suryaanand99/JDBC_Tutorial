@@ -5,7 +5,9 @@ import springBoot.springDatabase.entity.Person;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.TypedQuery;
 import javax.transaction.Transactional;
+import java.util.List;
 
 @Repository
 @Transactional
@@ -28,5 +30,10 @@ public class PersonJpaRepository {
 
     public void deleteById(int id) {
         entityManager.remove(findById(id));
+    }
+
+    public List<Person> findAll() {
+        final TypedQuery<Person> namedQuery = entityManager.createNamedQuery("find-all-person", Person.class);
+        return namedQuery.getResultList();
     }
 }
