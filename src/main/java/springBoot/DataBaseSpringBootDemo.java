@@ -22,5 +22,6 @@ public class DataBaseSpringBootDemo implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         LOGGER.info("All persons -> {}", personJDBCDAO.findAll());
+        LOGGER.info("Person -> {}", personJDBCDAO.findById(10001));
     }
 }
