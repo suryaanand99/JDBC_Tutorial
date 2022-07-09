@@ -6,12 +6,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import springBoot.jdbc.PersonJDBCDAO;
-import springBoot.jdbc.entity.Person;
+import springBoot.springdata.PersonJDBCDAO;
+import springBoot.springdata.entity.Person;
 
 import java.util.Date;
 
-@SpringBootApplication
 public class DataBaseSpringBootDemo implements CommandLineRunner {
     private Logger LOGGER = LoggerFactory.getLogger(this.getClass());
 
