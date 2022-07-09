@@ -1,7 +1,7 @@
-package springBoot.springdata;
+package springBoot.springDatabase;
 
 import org.springframework.stereotype.Repository;
-import springBoot.springdata.entity.Person;
+import springBoot.springDatabase.entity.Person;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -16,5 +16,13 @@ public class PersonJpaRepository {
 
     public Person findById(int id){
        return entityManager.find(Person.class, id);
+    }
+
+    public Person update(Person person) {
+        return entityManager.merge(person);
+    }
+
+    public Person insert(Person person){
+        return entityManager.merge(person);
     }
 }

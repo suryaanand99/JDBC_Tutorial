@@ -1,10 +1,10 @@
-package springBoot.springdata;
+package springBoot.springDatabase;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
-import springBoot.springdata.entity.Person;
+import springBoot.springDatabase.entity.Person;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

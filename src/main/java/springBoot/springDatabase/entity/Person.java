@@ -1,4 +1,4 @@
-package springBoot.springdata.entity;
+package springBoot.springDatabase.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
